@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Booking</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>✨ CleanSpace</h1>
+    <p>Premium Cleaning Booking Experience</p>
+</header>
+
+<div class="container">
+
+    <!-- LEFT FORM -->
+    <div class="form-card">
+        <h2>Book Your Service</h2>
+
+        <form id="bookingForm">
+
+            <label>Select Service</label>
+            <div id="serviceCards" class="services"></div>
+            <input type="hidden" id="service_id">
+            <input type="hidden" id="service_name">
+
+            <div class="row">
+                <input type="date" id="booking_date" required>
+                <input type="time" id="booking_time" required>
+            </div>
+
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="address" placeholder="Your Address" required></textarea>
+            <textarea id="notes" placeholder="Notes (Optional)"></textarea>
+
+            <button type="submit" class="btn-main">Confirm Booking</button>
+
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <!-- RIGHT SUMMARY -->
+    <div class="summary-card">
+        <h3>Booking Summary</h3>
+
+        <p><span>Service</span> <b id="summaryService">-</b></p>
+        <p><span>Date</span> <b id="summaryDate">-</b></p>
+        <p><span>Time</span> <b id="summaryTime">-</b></p>
+        <p><span>Phone</span> <b id="summaryPhone">-</b></p>
+        <p><span>Address</span> <b id="summaryAddress">-</b></p>
+        <p><span>Notes</span> <b id="summaryNotes">-</b></p>
+    </div>
+
+</div>
+
+<script src="booking.js"></script>
+</body>
+</html>
